@@ -7,7 +7,7 @@ server_name: "kuku.com"
 #repo_git_url: "app_github_url"
 #ansible_ssh_private_key_file: "ssh_dir"
 php_version: 7.2
-app_work_dir: /var/www/kuku/
+app_work_dir: /opt/nginx/ansible/public
 #mysql config
 #mysql_host: "mysql_host"
 #mysql_db: app_name

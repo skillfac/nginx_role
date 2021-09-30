@@ -1,5 +1,5 @@
 ---
-- name: Remove Apache
+- name: Remove ugly Apache
   apt:
     name: apache2
     state: absent
@@ -40,4 +40,20 @@
     state: link
   tags:
     - nginx
+  notify: Restart Nginx
+
+- name: make working directory
+  become: true
+  file:
+    path: "{{ app_work_dir }}public"
+    state: "directory" 
+    mode: '0755'
+
+
+
+- name: Throw index.php
+  become: true
+  template:
+    src: templates/index.php
+    dest: "{{ app_work_dir }}public"
   notify: Restart Nginx
