@@ -1,9 +1,8 @@
 ---
 #- hosts: nana-test
-#common options between modules
-  become: yes
-  become_method: sudo
-  gather_facts: no
+  #become: yes
+  #become_method: sudo
+  #gather_facts: no
 
   vars_files:
     - ./group_vars/vars.yml
