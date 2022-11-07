@@ -1,5 +1,5 @@
 ---
-- hosts: nana-test
+#- hosts: nana-test
 #common options between modules
   become: yes
   become_method: sudo
